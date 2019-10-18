@@ -10,7 +10,8 @@ To install, download or clone the repo, then:
 
 npm install
 
-Start Ganache like below .
+Start Ganache by using
+
 ganache-cli
 
 In a separate terminal window,from inside the directory eth-contracts/ Compile smart contracts:
@@ -21,10 +22,48 @@ This will create the smart contract artifacts in folder build\contracts.
 
 Then compile and deploy with truffle.
 To deploy to local ganache blockchain use
+
 truffle migrate
 
 To deploy to Rinkeby testnet use
+
 truffle migrate --reset --network rinkeby
+
+## Testing
+To run truffle tests from inside the directory eth-contracts/:
+
+truffle test ./test/TestERC721Mintable.js
+truffle test ./test/TestSquareVerifier.js
+truffle test ./test/TestSolnSquareVerifier.js
+
+## Deployment
+1. Create an account in Infura
+2. Create a project in Infura and get the Address for deploying in Rinkeby test network
+3. Copy the endpoint address and update the Rinkeby network information with the mnemonic and endpoint address in Truffle.js file
+4. Fund the metamask wallet by posting a tweet in https://faucet.rinkeby.io. The post should have the address “ Requesting faucet funds into ……. On the Rinkeby Ethereum test network” Then copy the tweet in the above website and click Give me Ether.
+5. Then deploy it using: truffle migrate --reset --network rinkeby. 
+
+## Create ZK-Snarks Proof using Zokrates
+Install Docker Community Edition here (https://docs.docker.com/install/). Virtualization should be enabled for Docker to work.
+
+Run Zokrates docker container : docker run -v :/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
+
+Change directory cd code/zokrates/code/square/
+
+Compile the program written in ZoKrates DSL /path/to/zokrates compile -i square.code
+
+Generate the Trusted Setup Now take the 'flattened' code, which is a circuit and go through a 'trusted setup' Repeat this process, every-time the program.code changes Two keys are generated - 'proving.key' and 'verification.key'
+
+/path/to/zokrates setup
+
+Compute Witness Having gone through the 'trusted setup' let's compute our 'witness' who knows the answer and it generates a witness file with computation steps
+/path/to/zokrates compute-witness -a 3 9
+
+Generate Proof Next step is to 'generate our proof' based on the above 'witness'. A proof.json file is generated in this step
+/path/to/zokrates generate-proof
+
+Export Verifier Last but never the least, let's generate our 'verifier' smart contract
+path/to/zokrates export-verifier
 
 
 # Project Resources
