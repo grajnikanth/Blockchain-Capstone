@@ -44,26 +44,29 @@ truffle test ./test/TestSolnSquareVerifier.js
 5. Then deploy it using: truffle migrate --reset --network rinkeby. 
 
 ## Create ZK-Snarks Proof using Zokrates
-Install Docker Community Edition here (https://docs.docker.com/install/). Virtualization should be enabled for Docker to work.
+1. Install Docker Community Edition here (https://docs.docker.com/install/). Virtualization should be enabled for Docker to work.
 
-Run Zokrates docker container : docker run -v :/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
+2. Run Zokrates docker container : docker run -v :/home/zokrates/code -ti zokrates/zokrates:0.3.0 /bin/bash
 
-Change directory cd code/zokrates/code/square/
+3. Change directory cd code/zokrates/code/square/
 
-Compile the program written in ZoKrates DSL /path/to/zokrates compile -i square.code
+4. Compile the program written in ZoKrates DSL /path/to/zokrates compile -i square.code
 
-Generate the Trusted Setup Now take the 'flattened' code, which is a circuit and go through a 'trusted setup' Repeat this process, every-time the program.code changes Two keys are generated - 'proving.key' and 'verification.key'
+5. Generate the Trusted Setup Now take the 'flattened' code, which is a circuit and go through a 'trusted setup' Repeat this process, every-time the program.code changes Two keys are generated - 'proving.key' and 'verification.key'
 
 /path/to/zokrates setup
 
-Compute Witness Having gone through the 'trusted setup' let's compute our 'witness' who knows the answer and it generates a witness file with computation steps
+6. Compute Witness Having gone through the 'trusted setup' let's compute our 'witness' who knows the answer and it generates a witness file with computation steps
+
 /path/to/zokrates compute-witness -a 3 9
 
-Generate Proof Next step is to 'generate our proof' based on the above 'witness'. A proof.json file is generated in this step
+7. Generate Proof Next step is to 'generate our proof' based on the above 'witness'. A proof.json file is generated in this step
 /path/to/zokrates generate-proof
 
-Export Verifier Last but never the least, let's generate our 'verifier' smart contract
+8. Export Verifier Last but never the least, let's generate our 'verifier' smart contract
 path/to/zokrates export-verifier
+
+9. Copy the verifier.sol file to the /eth-contracts/contracts/ folder.
 
 
 # Project Resources
