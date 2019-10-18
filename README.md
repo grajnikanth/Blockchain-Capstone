@@ -68,6 +68,32 @@ path/to/zokrates export-verifier
 
 9. Copy the verifier.sol file to the /eth-contracts/contracts/ folder.
 
+## Minting Tokens
+1. Mint 10 tokens using Myetherwallet (MEW) contract interaction website https://www.myetherwallet.com/interface/interact-with-contract using Metamask wallet.
+
+2. Copy and paste the contract address deployed to rinkeby.
+
+3. Copy and past the ABI from artifacts located in the /build/contracts/SolnSquareVerifier.json file onto MEW website.
+
+3. Select the mint function associated with the contract RealEstateERC721Token to mint 10 tokens.
+
+## OpenSea Marketplace 
+1. On rinkeby OpenSea market plate create storefront and import token using the "add an existing contract" button using the rinkeby deployed contract address. https://rinkeby.opensea.io/
+
+2. Properties for which tokens are minted can be viewed using e.g to view the property with token 5 
+https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/5
+
+## Project Contract Addresses and Links
+1. contract address(SolnSquareVerifier): 0xb603Bfa595D125299b11F01A68A805F50698B332
+    https://rinkeby.etherscan.io/address/0xb603Bfa595D125299b11F01A68A805F50698B332
+    https://rinkeby.etherscan.io/address/0x653f83723da88edfce875573900fe398e40f1ee1
+2. contract address(SquareVerifier): 0xd29bF0cFe162c991b735FdE27405777D2ed536bA
+    https://rinkeby.etherscan.io/address/0xd29bF0cFe162c991b735FdE27405777D2ed536bA
+3. The contract ABIs are located in the corresponding .json files under the folder build/contracts
+4. OpenSea storefront Links:
+  https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/5
+  https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/4
+  
 
 # Project Resources
 
