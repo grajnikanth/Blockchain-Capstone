@@ -87,6 +87,7 @@ https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/5
 1. contract address(SolnSquareVerifier): 0xb603Bfa595D125299b11F01A68A805F50698B332
     https://rinkeby.etherscan.io/address/0xb603Bfa595D125299b11F01A68A805F50698B332
     https://rinkeby.etherscan.io/address/0x653f83723da88edfce875573900fe398e40f1ee1
+    https://rinkeby.etherscan.io/address/0xbe67a7afba64de1dab71b55f5c67acba68b6fa76
 2. contract address(SquareVerifier): 0xd29bF0cFe162c991b735FdE27405777D2ed536bA
     https://rinkeby.etherscan.io/address/0xd29bF0cFe162c991b735FdE27405777D2ed536bA
 3. The contract ABIs are located in the corresponding .json files under the folder build/contracts
