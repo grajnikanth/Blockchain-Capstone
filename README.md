@@ -1,7 +1,11 @@
 # Udacity Blockchain Capstone - Real Estate NFT Tokens
-In this project I am minting my own tokens to represent my title to real estate properties I own. To provide proof that I own these properties, I used zk-SNARKs to create a verification system which can prove I have title to the property without revealing that specific information on the property. This was done using the Zokrates toolbox https://zokrates.github.io/
+In this project I worked on creating a decentralized House Listing Service. The service seeks to eliminate title fraud using Blockchain. This is done by building immutable digital records and using Blockchain for transparent transactions. This will help to remove the title insurance to mitigate fraud which typically needs to be purchased by the owner in current paper based real estate transactions.
 
-Once the token has been verified I minted 10 NFT tokens and deployed it on Rinkeby Network. Then I uploaded 5 of these tokens to blockchain market place (OpenSea - Rinkeby) for others to purchase https://rinkeby.opensea.io/. Then I proceeded to sell the tokens and bought them using a different account. 
+In this project I minted my own tokens to represent title to the properties I own. Before I mint a token, I provide proof that I own the property. I used zk-SNARKs to create a verification system which can prove I have title to the property without revealing specific information on the property. This was done using the Zokrates toolbox https://zokrates.github.io/
+
+Once the token has been verified I placed it on a blockchain market place (OpenSea) for others to purchase.
+
+Once the token has been verified I minted 10 NFT tokens and deployed it on Rinkeby Network. Then I uploaded 5 of these tokens to blockchain market place (OpenSea - Rinkeby) for others to purchase https://rinkeby.opensea.io/. Then I proceeded to sell the tokens. To show that this works I bought these NFT tokens using a different account on OpenSea. 
 
 ## Install
 This repository contains Smart Contract code in Solidity (using Truffle), tests (also using Truffle) and zk-Snarks generated proofs and verifier contract.
