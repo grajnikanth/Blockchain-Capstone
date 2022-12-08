@@ -82,10 +82,8 @@ path/to/zokrates export-verifier
 3. Select the mint function associated with the contract RealEstateERC721Token to mint 10 tokens.
 
 ## OpenSea Marketplace 
-1. On rinkeby OpenSea market plate create storefront and import token using the "add an existing contract" button using the rinkeby deployed contract address. https://rinkeby.opensea.io/
+1. On rinkeby OpenSea market place create storefront and import token using the "add an existing contract" button using the rinkeby deployed contract address. https://rinkeby.opensea.io/
 
-2. Properties for which tokens are minted can be viewed using e.g to view the property with token 5 
-https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/5
 
 ## Project Contract Addresses and Links
 1. contract address(SolnSquareVerifier): 0xb603Bfa595D125299b11F01A68A805F50698B332
@@ -95,10 +93,7 @@ https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/5
 2. contract address(SquareVerifier): 0xd29bF0cFe162c991b735FdE27405777D2ed536bA
     https://rinkeby.etherscan.io/address/0xd29bF0cFe162c991b735FdE27405777D2ed536bA
 3. The contract ABIs are located in the corresponding .json files under the folder build/contracts
-4. OpenSea storefront Links:
-  https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/5
-  https://rinkeby.opensea.io/assets/0xb603bfa595d125299b11f01a68a805f50698b332/4
-  
+
 
 # Project Resources
 
